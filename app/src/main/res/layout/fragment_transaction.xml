@@ -31,6 +31,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
 
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFromEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_account"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/vFromAcc"
+        app:layout_constraintEnd_toEndOf="@+id/vFromAcc"
+        app:layout_constraintStart_toStartOf="@+id/vFromAcc"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <View
         android:id="@+id/vFromAcc"
         android:layout_width="0dp"
@@ -42,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ivIcon"
+        android:id="@+id/ivFromIcon"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
@@ -52,43 +63,44 @@
         app:srcCompat="@mipmap/ic_launcher" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvAccName"
+        android:id="@+id/tvFromName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="@string/cash"
-        app:layout_constraintStart_toEndOf="@+id/ivIcon"
-        app:layout_constraintTop_toTopOf="@+id/ivIcon" />
+        app:layout_constraintStart_toEndOf="@+id/ivFromIcon"
+        app:layout_constraintTop_toTopOf="@+id/ivFromIcon" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvAmount"
+        android:id="@+id/tvFromAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="350"
-        app:layout_constraintBottom_toBottomOf="@+id/ivIcon"
-        app:layout_constraintStart_toEndOf="@+id/ivIcon" />
+        app:layout_constraintBottom_toBottomOf="@+id/ivFromIcon"
+        app:layout_constraintStart_toEndOf="@+id/ivFromIcon" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvValute"
+        android:id="@+id/tvFromValute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:text="$"
-        app:layout_constraintStart_toEndOf="@+id/tvAmount"
-        app:layout_constraintTop_toTopOf="@+id/tvAmount" />
+        app:layout_constraintStart_toEndOf="@+id/tvFromAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvFromAmount" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFromHideNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/stars"
         android:layout_marginEnd="5dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvAccNum"
-        app:layout_constraintEnd_toStartOf="@+id/tvAccNum"
-        app:layout_constraintTop_toTopOf="@+id/tvAccNum" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvFromAccNum"
+        app:layout_constraintEnd_toStartOf="@+id/tvFromAccNum"
+        app:layout_constraintTop_toTopOf="@+id/tvFromAccNum" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvAccNum"
+        android:id="@+id/tvFromAccNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
@@ -108,6 +120,18 @@
         app:layout_constraintStart_toStartOf="@+id/vFromAcc"
         app:layout_constraintTop_toBottomOf="@+id/vFromAcc" />
 
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvToEmpty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_account"
+        app:layout_constraintBottom_toBottomOf="@+id/vToAcc"
+        app:layout_constraintEnd_toEndOf="@+id/vToAcc"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/vToAcc"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4" />
+
     <View
         android:id="@+id/vToAcc"
         android:layout_width="0dp"
@@ -119,7 +143,7 @@
         app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/appCompatImageView2"
+        android:id="@+id/tvToIcon"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"
@@ -129,40 +153,43 @@
         app:srcCompat="@mipmap/ic_launcher" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvToName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cash"
         android:layout_marginStart="10dp"
-        app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
-        app:layout_constraintTop_toTopOf="@+id/appCompatImageView2" />
+        app:layout_constraintStart_toEndOf="@+id/tvToIcon"
+        app:layout_constraintTop_toTopOf="@+id/tvToIcon" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/appCompatTextView7"
+        android:id="@+id/tvToAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="350"
-        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2"
-        app:layout_constraintStart_toEndOf="@+id/appCompatImageView2" />
+        app:layout_constraintBottom_toBottomOf="@+id/tvToIcon"
+        app:layout_constraintStart_toEndOf="@+id/tvToIcon" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvToValute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="$"
         android:layout_marginStart="5dp"
-        app:layout_constraintStart_toEndOf="@+id/appCompatTextView7"
-        app:layout_constraintTop_toTopOf="@+id/appCompatTextView7" />
+        app:layout_constraintStart_toEndOf="@+id/tvToAmount"
+        app:layout_constraintTop_toTopOf="@+id/tvToAmount" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvToHideNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/stars"
         android:layout_marginEnd="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textView2" />
+        app:layout_constraintEnd_toStartOf="@+id/tvToNum"
+        app:layout_constraintTop_toTopOf="@+id/tvToNum" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/tvToNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"

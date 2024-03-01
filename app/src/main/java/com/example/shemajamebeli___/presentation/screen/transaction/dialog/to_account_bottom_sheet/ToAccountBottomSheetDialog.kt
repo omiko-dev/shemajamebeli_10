@@ -46,6 +46,7 @@ class ToAccountBottomSheetDialog : BottomSheetDialogFragment() {
 
     private fun transactionTypeListener() {
         with(binding) {
+            rbId = rbAccountNum.id
             rgTransactionType.setOnCheckedChangeListener { _, checkedId ->
                 rbId = checkedId
 

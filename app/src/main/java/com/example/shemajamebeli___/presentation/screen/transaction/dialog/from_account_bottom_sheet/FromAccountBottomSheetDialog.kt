@@ -16,6 +16,7 @@ import com.example.shemajamebeli___.presentation.screen.transaction.dialog.from_
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+
 @AndroidEntryPoint
 class FromAccountBottomSheetDialog: BottomSheetDialogFragment() {
     private val viewModel: FromAccountViewModel by viewModels()
@@ -64,11 +65,12 @@ class FromAccountBottomSheetDialog: BottomSheetDialogFragment() {
     private fun fromAccountCardListener(){
         adapter.onClick = {
             fromAccountListener?.getFromAccount(it)
+            dismiss()
         }
     }
 
     interface FromAccountListener{
-        fun getFromAccount(item: FromAccountUi)
+        fun getFromAccount(fromAccountUi: FromAccountUi)
     }
 
     fun setFromAccountListener(listener: FromAccountListener){
